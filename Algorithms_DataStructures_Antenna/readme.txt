@@ -10,3 +10,5 @@ Supported datatypes are Integer, Double and String (-Lists).
 Input-lists are generated with random data.
 
 Results (and algorithm flow) are printed to the default console.
+
+Variation here is achieved by using the preprocessor Antenna.
