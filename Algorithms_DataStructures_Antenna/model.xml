@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel chosenLayoutAlgorithm="1">
+		<struct>
+			<and mandatory="true" name="DataStructures">
+				<or abstract="true" name="Algorithms">
+					<and mandatory="true" name="Sort">
+						<description>
+							array definitions for sort functions
+						</description>
+						<feature name="BubbleSort">
+							<description>
+								implementation of BubbleSort algorithm
+								and application on sample data
+							</description>
+						</feature>
+						<feature name="QuickSort">
+							<description>
+								implementation of Quicksort algorithm
+								and application on sample data
+							</description>
+						</feature>
+					</and>
+					<and mandatory="true" name="Search">
+						<description>
+							array definition(s) for search function(s)
+						</description>
+						<feature name="LinearSearch">
+							<description>
+								implementation of linear search and
+								application on sample data
+							</description>
+						</feature>
+					</and>
+				</or>
+				<and abstract="true" name="Structures">
+					<feature name="Array"/>
+					<feature name="LinkedList">
+						<description>
+							not implemented yet
+						</description>
+					</feature>
+					<and abstract="true" name="Tree">
+						<feature name="Binary"/>
+					</and>
+					<feature name="Graph"/>
+					<feature name="Heap"/>
+				</and>
+				<or abstract="true" mandatory="true" name="DataTypes">
+					<description>
+						algorithm examples are shown with selected data types
+					</description>
+					<feature mandatory="true" name="Integer">
+						<description>
+							algorithm examples will use Integer as element data type
+						</description>
+					</feature>
+					<feature mandatory="true" name="String">
+						<description>
+							algorithm examples will use String as element data type
+						</description>
+					</feature>
+					<feature mandatory="true" name="Double">
+						<description>
+							algorithm examples will use Double as element data type
+						</description>
+					</feature>
+				</or>
+				<alt abstract="true" mandatory="true" name="Visualisation">
+					<and mandatory="true" name="Console">
+						<feature mandatory="true" name="Result"/>
+						<feature name="Comments"/>
+						<feature name="Code"/>
+					</and>
+					<feature mandatory="true" name="Simulation"/>
+				</alt>
+			</and>
+		</struct>
+		<constraints>
+			<rule>
+				<imp>
+					<disj>
+						<var>BubbleSort</var>
+						<disj>
+							<var>QuickSort</var>
+							<var>LinearSearch</var>
+						</disj>
+					</disj>
+					<var>Array</var>
+				</imp>
+			</rule>
+		</constraints>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>
