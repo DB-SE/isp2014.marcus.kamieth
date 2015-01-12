@@ -1,0 +1,129 @@
+{
+	"features" : [
+		"DataStructures",
+		"Sort",
+		"BubbleSort",
+		"QuickSort",
+		"Search",
+		"LinearSearch",
+		"List",
+		"Array",
+		"DataTypes",
+		"Integer",
+		"Console",
+		"Result",
+		"Comments"
+	],
+	"roles": {
+		"get": {
+			"DataStructures": "get",
+			"List": "get",
+			"Array": "get"
+		},
+		"insert": {
+			"DataStructures": "insert",
+			"List": "insert",
+			"Array": "insert"
+		},
+		"swap": {
+			"DataStructures": "swap",
+			"List": "swap",
+			"Array": "swap"
+		},
+		"printList": {
+			"DataStructures": "printList",
+			"List": "printList",
+			"Array": "printList"
+		},
+		"linearSearch": {
+			"DataStructures": "linearSearch",
+			"LinearSearch": "linearSearch"
+		},
+		"main": {
+			"DataStructures": "main"
+		},
+		"linearSearchExampleInt": {
+			"DataStructures": "linearSearchExampleInt",
+			"Integer": "linearSearchExampleInt"
+		},
+		"linearSearchExampleDbl": {
+			"DataStructures": "linearSearchExampleDbl",
+			"Double": "linearSearchExampleDbl"
+		},
+		"linearSearchExampleStr": {
+			"DataStructures": "linearSearchExampleStr",
+			"String": "linearSearchExampleStr"
+		},
+		"bubbleSortExampleInt": {
+			"DataStructures": "bubbleSortExampleInt",
+			"Integer": "bubbleSortExampleInt"
+		},
+		"bubbleSortExampleDbl": {
+			"DataStructures": "bubbleSortExampleDbl",
+			"Double": "bubbleSortExampleDbl"
+		},
+		"bubbleSortExampleStr": {
+			"DataStructures": "bubbleSortExampleStr",
+			"String": "bubbleSortExampleStr"
+		},
+		"quickSortExampleInt": {
+			"DataStructures": "quickSortExampleInt",
+			"Integer": "quickSortExampleInt"
+		},
+		"quickSortExampleDbl": {
+			"DataStructures": "quickSortExampleDbl",
+			"Double": "quickSortExampleDbl"
+		},
+		"quickSortExampleStr": {
+			"DataStructures": "quickSortExampleStr",
+			"String": "quickSortExampleStr"
+		},
+		"bubbleSort": {
+			"DataStructures": "bubbleSort",
+			"BubbleSort": "bubbleSort"
+		},
+		"quickSort": {
+			"DataStructures": "quickSort",
+			"QuickSort": "quickSort"
+		},
+		"qSort": {
+			"QuickSort": "qSort"
+		},
+		"partition": {
+			"QuickSort": "partition"
+		},
+		"getNewInt": {
+			"Integer": "getNewInt"
+		},
+		"getNewIntArray": {
+			"Integer": "getNewIntArray"
+		},
+		"getNewStringArray": {
+			"String": "getNewStringArray"
+		},
+		"getNewString": {
+			"String": "getNewString"
+		},
+		"getNewDouble": {
+			"Double": "getNewDouble"
+		},
+		"getNewDoubleArray": {
+			"Double": "getNewDoubleArray"
+		},
+		"printArray": {
+			"Result": "printArray"
+		},
+		"printText": {
+			"Result": "printText"
+		},
+		"printComment": {
+			"Result": "printComment",
+			"Comments": "printComment"
+		},
+		"printArrayComment": {
+			"Result": "printArrayComment",
+			"Comments": "printArrayComment"
+		}
+	}
+
+}
