@@ -17,5 +17,10 @@ public   class  LinearSearch  <T> {
 		Output.printText("Value not in list.\n");
 	}
 
+	
+	public boolean equalsNeedle(T value, T needle){
+		return false;
+	}
+
 
 }

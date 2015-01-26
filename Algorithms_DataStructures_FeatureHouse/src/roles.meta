@@ -39,6 +39,9 @@
 			"DataStructures": "linearSearch",
 			"LinearSearch": "linearSearch"
 		},
+		"equalsNeedle": {
+			"DataStructures": "equalsNeedle"
+		},
 		"main": {
 			"DataStructures": "main"
 		},
@@ -47,36 +50,30 @@
 			"Integer": "linearSearchExampleInt"
 		},
 		"linearSearchExampleDbl": {
-			"DataStructures": "linearSearchExampleDbl",
-			"Double": "linearSearchExampleDbl"
+			"DataStructures": "linearSearchExampleDbl"
 		},
 		"linearSearchExampleStr": {
-			"DataStructures": "linearSearchExampleStr",
-			"String": "linearSearchExampleStr"
+			"DataStructures": "linearSearchExampleStr"
 		},
 		"bubbleSortExampleInt": {
 			"DataStructures": "bubbleSortExampleInt",
 			"Integer": "bubbleSortExampleInt"
 		},
 		"bubbleSortExampleDbl": {
-			"DataStructures": "bubbleSortExampleDbl",
-			"Double": "bubbleSortExampleDbl"
+			"DataStructures": "bubbleSortExampleDbl"
 		},
 		"bubbleSortExampleStr": {
-			"DataStructures": "bubbleSortExampleStr",
-			"String": "bubbleSortExampleStr"
+			"DataStructures": "bubbleSortExampleStr"
 		},
 		"quickSortExampleInt": {
 			"DataStructures": "quickSortExampleInt",
 			"Integer": "quickSortExampleInt"
 		},
 		"quickSortExampleDbl": {
-			"DataStructures": "quickSortExampleDbl",
-			"Double": "quickSortExampleDbl"
+			"DataStructures": "quickSortExampleDbl"
 		},
 		"quickSortExampleStr": {
-			"DataStructures": "quickSortExampleStr",
-			"String": "quickSortExampleStr"
+			"DataStructures": "quickSortExampleStr"
 		},
 		"bubbleSort": {
 			"DataStructures": "bubbleSort",
@@ -97,18 +94,6 @@
 		},
 		"getNewIntArray": {
 			"Integer": "getNewIntArray"
-		},
-		"getNewStringArray": {
-			"String": "getNewStringArray"
-		},
-		"getNewString": {
-			"String": "getNewString"
-		},
-		"getNewDouble": {
-			"Double": "getNewDouble"
-		},
-		"getNewDoubleArray": {
-			"Double": "getNewDoubleArray"
 		},
 		"printArray": {
 			"Result": "printArray"

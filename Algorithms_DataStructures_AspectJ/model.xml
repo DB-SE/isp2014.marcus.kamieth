@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel chosenLayoutAlgorithm="1">
+		<struct>
+			<and mandatory="true" name="DataStructures">
+				<or abstract="true" name="Algorithms">
+					<and mandatory="true" name="ASort">
+						<description>
+							array definitions for sort functions
+						</description>
+						<feature name="ABubbleSort">
+							<description>
+								implementation of BubbleSort algorithm
+								and application on sample data
+							</description>
+						</feature>
+						<feature name="AQuickSort">
+							<description>
+								implementation of Quicksort algorithm
+								and application on sample data
+							</description>
+						</feature>
+					</and>
+					<and mandatory="true" name="ASearch">
+						<description>
+							array definition(s) for search function(s)
+						</description>
+						<feature name="ALinearSearch">
+							<description>
+								implementation of linear search and
+								application on sample data
+							</description>
+						</feature>
+					</and>
+				</or>
+				<and abstract="true" name="Structures">
+					<and name="AList">
+						<feature name="AArray"/>
+						<feature name="LinkedList">
+							<description>
+								not implemented yet
+							</description>
+						</feature>
+					</and>
+					<and abstract="true" name="Tree">
+						<feature name="Binary"/>
+					</and>
+					<feature name="Graph"/>
+					<feature name="Heap"/>
+				</and>
+				<or mandatory="true" name="DataTypes">
+					<description>
+						algorithm examples are shown with selected data types
+					</description>
+					<feature mandatory="true" name="AInteger">
+						<description>
+							algorithm examples will use Integer as element data type
+						</description>
+					</feature>
+					<feature mandatory="true" name="AString">
+						<description>
+							algorithm examples will use String as element data type
+						</description>
+					</feature>
+					<feature mandatory="true" name="ADouble">
+						<description>
+							algorithm examples will use Double as element data type
+						</description>
+					</feature>
+				</or>
+				<alt abstract="true" mandatory="true" name="Visualisation">
+					<and mandatory="true" name="Console">
+						<feature mandatory="true" name="Result"/>
+						<feature name="Comments"/>
+						<feature name="Code"/>
+					</and>
+					<feature mandatory="true" name="Simulation"/>
+				</alt>
+			</and>
+		</struct>
+		<constraints>
+			<rule>
+				<imp>
+					<disj>
+						<var>ABubbleSort</var>
+						<disj>
+							<var>AQuickSort</var>
+							<var>ALinearSearch</var>
+						</disj>
+					</disj>
+					<var>AArray</var>
+				</imp>
+			</rule>
+		</constraints>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>
