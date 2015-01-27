@@ -43,7 +43,7 @@ public aspect AString {
 	public void Main.quickSortExampleStr(){
 		String[] strarray = ValueGenerator.getNewStringArray();
 		//Output.printArray(strarray);
-		ASort.quickSort(strarray);
+		Sort.quickSort(strarray);
 		//Output.printArray(strarray);
 	}
 	

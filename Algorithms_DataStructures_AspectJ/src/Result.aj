@@ -13,8 +13,9 @@ public aspect Result {
 		System.out.print(text);
 	}
 	
-	Integer around(Object[] a, Object b) : call(* ALinearSearch.linearSearch(..))
+	Integer around(Object[] a, Object b) : call(* LinearSearch.linearSearch(..))
 		&& args(a,b) {
+		System.out.println("Array for LinearSearch");
 		Output.printArray(a);
 		Output.printText("Needle=" + b + "\n");	
 		Integer result = proceed(a,b);
@@ -24,5 +25,21 @@ public aspect Result {
 			System.out.println("Needle found at index " + result);
 		}
 		return result;
+	}
+	
+	void around(Object[] arr) : call(* Sort.quickSort(..)) && args(arr) {
+		System.out.println("Array before QuickSort:");
+		Output.printArray(arr);
+		proceed(arr);
+		System.out.println("Array after QuickSort:");
+		Output.printArray(arr);
+	}
+	
+	void around(Object[] arr) : call(* Sort.bubbleSort(..)) && args(arr) {
+		System.out.println("Array before BubbleSort:");
+		Output.printArray(arr);
+		proceed(arr);
+		System.out.println("Array after BubbleSort:");
+		Output.printArray(arr);
 	}
 }

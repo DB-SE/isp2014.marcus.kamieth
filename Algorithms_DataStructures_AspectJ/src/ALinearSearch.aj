@@ -19,7 +19,7 @@ public aspect ALinearSearch {
 	}
 	
 	/* used cause otherwise it was not possible to access a joinpoint for outputting*/
-	public <T> boolean ALinearSearch.equalsNeedle(T listValue, T needle){
+	public <T> boolean LinearSearch.equalsNeedle(T listValue, T needle){
 		return needle.equals(listValue);
 	}
 }

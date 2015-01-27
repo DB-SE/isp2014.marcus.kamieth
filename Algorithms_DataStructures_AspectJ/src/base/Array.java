@@ -1,34 +1,31 @@
+import java.util.ArrayList;
+
 //unused / not implemented, generic arrays are not supported this way!
 //for demonstration purpose
 public class Array<E> extends List<E> {
 
-	private E[] data;
+	//private E[] data;
+	private ArrayList<E> data;
 	
 	public Array(int size){
 		//data = new E[size]; //doesn't work
+		data = new ArrayList<E>(size);
 	}
 	@Override
 	public E get(int index) {
 		// TODO Auto-generated method stub
-		return null;
+		return data.get(index);
 	}
 
 	@Override
 	public void insert(E item) {
-		// TODO Auto-generated method stub
-		
+		data.add(item);
 	}
 
 	@Override
 	public void swap(int i, int j) {
-		// TODO Auto-generated method stub
-		
+		E tmp = data.get(i);
+		data.set(i, data.get(j));
+		data.set(j, tmp);
 	}
-
-	@Override
-	public void printList() {
-		// TODO Auto-generated method stub
-		
-	}
-	
 }
