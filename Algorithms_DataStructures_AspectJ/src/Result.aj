@@ -1,19 +1,21 @@
-import base.Output;
-
+import base.*;
 
 public aspect Result {
-	public static <E> void Output.printArray(E[] arr){
+	public static <E> void Output.printArray(List<E> arr){
 		System.out.print("{ ");
-		for(int i=0; i<arr.length - 1; ++i){
-			System.out.print(arr[i] + ", ");
+		if(arr.size() > 0){
+			for(int i=0; i<arr.size() - 1; ++i){
+				System.out.print(arr.get(i) + ", ");
+			}
+			System.out.print(arr.get(arr.size() -1));
 		}
-		System.out.println(arr[arr.length -1]+ " }");
+		System.out.println("}");
 	}
 	public static void Output.printText(String text){
 		System.out.print(text);
 	}
 	
-	Integer around(Object[] a, Object b) : call(* LinearSearch.linearSearch(..))
+	Integer around(List<Object> a, Object b) : call(* LinearSearch.linearSearch(..))
 		&& args(a,b) {
 		System.out.println("Array for LinearSearch");
 		Output.printArray(a);
@@ -27,7 +29,7 @@ public aspect Result {
 		return result;
 	}
 	
-	void around(Object[] arr) : call(* Sort.quickSort(..)) && args(arr) {
+	void around(List<Object> arr) : call(* Sort.quickSort(..)) && args(arr) {
 		System.out.println("Array before QuickSort:");
 		Output.printArray(arr);
 		proceed(arr);
@@ -35,7 +37,7 @@ public aspect Result {
 		Output.printArray(arr);
 	}
 	
-	void around(Object[] arr) : call(* Sort.bubbleSort(..)) && args(arr) {
+	void around(List<Object> arr) : call(* Sort.bubbleSort(..)) && args(arr) {
 		System.out.println("Array before BubbleSort:");
 		Output.printArray(arr);
 		proceed(arr);

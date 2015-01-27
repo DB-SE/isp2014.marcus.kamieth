@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import base.List;
 //unused / not implemented, generic arrays are not supported this way!
 //for demonstration purpose
 public class Array<E> extends List<E> {
@@ -10,6 +10,9 @@ public class Array<E> extends List<E> {
 	public Array(int size){
 		//data = new E[size]; //doesn't work
 		data = new ArrayList<E>(size);
+	}
+	public int size(){
+		return data.size();
 	}
 	@Override
 	public E get(int index) {

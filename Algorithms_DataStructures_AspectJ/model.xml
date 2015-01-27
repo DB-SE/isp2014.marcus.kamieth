@@ -3,7 +3,7 @@
 		<struct>
 			<and mandatory="true" name="DataStructures">
 				<or abstract="true" name="Algorithms">
-					<and mandatory="true" name="ASort">
+					<and abstract="true" mandatory="true" name="ASort">
 						<description>
 							array definitions for sort functions
 						</description>
@@ -20,7 +20,7 @@
 							</description>
 						</feature>
 					</and>
-					<and mandatory="true" name="ASearch">
+					<and abstract="true" mandatory="true" name="ASearch">
 						<description>
 							array definition(s) for search function(s)
 						</description>
@@ -32,22 +32,22 @@
 						</feature>
 					</and>
 				</or>
-				<and abstract="true" name="Structures">
-					<and name="AList">
-						<feature name="AArray"/>
-						<feature name="LinkedList">
+				<and name="Structures">
+					<alt name="AList">
+						<feature mandatory="true" name="AArray"/>
+						<feature mandatory="true" name="ALinkedList">
 							<description>
 								not implemented yet
 							</description>
 						</feature>
-					</and>
+					</alt>
 					<and abstract="true" name="Tree">
-						<feature name="Binary"/>
+						<feature abstract="true" name="Binary"/>
 					</and>
-					<feature name="Graph"/>
-					<feature name="Heap"/>
+					<feature abstract="true" name="Graph"/>
+					<feature abstract="true" name="Heap"/>
 				</and>
-				<or mandatory="true" name="DataTypes">
+				<or abstract="true" mandatory="true" name="DataTypes">
 					<description>
 						algorithm examples are shown with selected data types
 					</description>
@@ -68,12 +68,12 @@
 					</feature>
 				</or>
 				<alt abstract="true" mandatory="true" name="Visualisation">
-					<and mandatory="true" name="Console">
+					<and abstract="true" mandatory="true" name="Console">
 						<feature mandatory="true" name="Result"/>
 						<feature name="Comments"/>
 						<feature name="Code"/>
 					</and>
-					<feature mandatory="true" name="Simulation"/>
+					<feature abstract="true" mandatory="true" name="Simulation"/>
 				</alt>
 			</and>
 		</struct>

@@ -1,5 +1,4 @@
-import base.Main;
-
+import base.*;
 
 public aspect AString {
 	private static String[] ValueGenerator.values = {
@@ -7,11 +6,11 @@ public aspect AString {
 		"mouse","tortoise","shark","whale","salmon","deer","wolf",
 		"grizzlybear","fox","snake","worm","fly","bee","hornet"
 	};
-	public static String[] ValueGenerator.getNewStringArray(){
+	public static List<String> ValueGenerator.getNewStringArray(){
 		int size = (int)(Math.random()*20 +1);
-		String[] arr = new String[size];
+		List<String> arr = new Array<String>(size);
 		for(int i=0; i<size;++i){
-			arr[i] = getNewString();
+			arr.insert( getNewString() );
 		}
 		return arr;
 	}
@@ -25,7 +24,7 @@ public aspect AString {
 	
 	
 	public void Main.linearSearchExampleStr(){
-		String[] strarray = ValueGenerator.getNewStringArray();
+		List<String> strarray = ValueGenerator.getNewStringArray();
 		String needle = ValueGenerator.getNewString();
 		//Output.printArray(strarray);
 		//Output.printText("Needle=" + needle);
@@ -34,14 +33,14 @@ public aspect AString {
 	}
 	
 	public void Main.bubbleSortExampleStr(){
-		String[] strarray = ValueGenerator.getNewStringArray();
+		List<String> strarray = ValueGenerator.getNewStringArray();
 		//Output.printArray(strarray);
 		Sort.bubbleSort(strarray);
 		//Output.printArray(strarray);
 	}
 	
 	public void Main.quickSortExampleStr(){
-		String[] strarray = ValueGenerator.getNewStringArray();
+		List<String> strarray = ValueGenerator.getNewStringArray();
 		//Output.printArray(strarray);
 		Sort.quickSort(strarray);
 		//Output.printArray(strarray);

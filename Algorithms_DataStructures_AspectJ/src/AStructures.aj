@@ -1,4 +1,4 @@
 
-public aspect Graph {
+public aspect AStructures {
 	// TODO Auto-generated aspect
 }

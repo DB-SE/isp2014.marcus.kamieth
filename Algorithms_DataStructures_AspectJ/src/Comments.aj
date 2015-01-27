@@ -1,5 +1,5 @@
 import base.Output;
-
+import base.*;
 
 public aspect Comments {
 	boolean around(Object a, Object b) : execution(public boolean LinearSearch.equalsNeedle(Object, Object))
@@ -13,11 +13,11 @@ public aspect Comments {
 		return eq;
 	}
 	
-	int around(Object[] list, int left, int right) : execution(public int Sort.partition(Object[], int, int))
+	int around(List<Object> list, int left, int right) : execution(int Sort.partition(List<Object>, int, int))
 	&& args(list, left, right){
-		System.out.println("Left["+left+"]:"+list[left]+" , Right/Pivot["+right+"]:"+list[right]+"\n");
+		System.out.println("Left["+left+"]:"+list.get(left)+" , Right/Pivot["+right+"]:"+list.get(right)+"\n");
 		int i = proceed(list, left, right);
-		System.out.println("After swapping: partition ["+i+"] "+ list[i]+"\n");
+		System.out.println("After swapping: partition ["+i+"] "+ list.get(i)+"\n");
 		Output.printArray(list);
 		return i;
 	}
